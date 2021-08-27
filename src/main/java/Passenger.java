@@ -1,24 +1,18 @@
 public class Passenger {
     private final String name;
-    private final int age;
     private int numberOfBags;
 
 
-    public Passenger(String name, int age, int numberOfBags) {
+    public Passenger(String name, int numberOfBags) {
         this.name = name;
-        this.age = age;
         this.numberOfBags = numberOfBags;
+    }
+
+     public String getName() {
+        return name;
     }
 
     public int getNumberOfBags(){
         return numberOfBags;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
     }
 }
