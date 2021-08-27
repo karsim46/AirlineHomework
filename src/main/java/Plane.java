@@ -1,10 +1,12 @@
 public class Plane {
     private int capacity;
     private double weight;
+    private String model;
 
-    public Plane(int capacity, double weight) {
+    public Plane(int capacity, double weight, String model) {
         this.capacity= capacity;
         this.weight = weight;
+        this.model = model;
     }
 
 
@@ -15,6 +17,11 @@ public class Plane {
     public double getWeight() {
         return weight;
     }
+
+    public String getModel() {
+        return model;
+    }
+
 
 }
 
