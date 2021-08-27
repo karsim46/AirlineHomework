@@ -9,7 +9,7 @@ JavaAir doesn't really exist (sadly) - don't stress about how a "real" example o
 * Each passenger bag weighs the same
 * Planes reserve half of their total weight for passenger bags
 * The weight of bag per person is the weight reserved for passenger bags divided by the capacity
-* Passengers exist for a single flight only
+* Person.Passengers exist for a single flight only
 
 ## MVP
 A `Passenger` has:
@@ -26,7 +26,7 @@ A `CabinCrewMember` has:
     <p>Perhaps use an `enum` for this</p>
   </details>
 
-A `Pilot` has:
+A `Person.Pilot` has:
 
 * a name
 * a rank
@@ -43,7 +43,7 @@ A `Plane` has:
 
 A `Flight` has:
 
-* at least one `Pilot`
+* at least one `Person.Pilot`
 * a list of `CabinCrewMembers` (you can decide the number)
 * an empty list of booked `Passenger`'s
 * a `Plane`
@@ -57,7 +57,7 @@ The `Flight`  should be able to:
 * return the number of available seats
 * book a passenger (if there are remaining seats)
 
-A `Pilot` should be able to:
+A `Person.Pilot` should be able to:
 
 * fly the plane (a simple method which returns a String is sufficient)
 
