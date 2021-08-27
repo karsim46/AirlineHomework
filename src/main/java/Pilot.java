@@ -18,7 +18,7 @@ public class Pilot {
         return rank;
     }
 
-    public String getPilotLicenseNum() {
+    public String getPilotLicenseNumber() {
         return pilotLicenseNumber;
     }
 }
