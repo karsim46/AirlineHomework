@@ -12,7 +12,7 @@ public class FlightTest {
     @Before
     public void setUp(){
         plane = new Plane(PlaneType.BOEING747,524,10000.00);
-        flight = new Flight(plane,"FL666","Hell", "ABZ");
+        flight = new Flight(plane,"FL666","Hell", "ABZ", "23.58");
     }
 
     @Test
@@ -32,6 +32,11 @@ public class FlightTest {
     @Test
     public void hasDestinationAirport(){
         assertEquals("ABZ", flight.getDestinationAirport());
+    }
+
+    @Test
+    public void hasDeptTime(){
+        assertEquals("23.58",flight.getDeptTime());
     }
 
 

@@ -4,14 +4,16 @@ public class Flight {
     private String flightNumber;
     private String destination;
     private String destinationAirport;
+    public String deptTime;
 
 
 
-    public Flight(Plane plane, String flightNumber, String destination, String destinationAirport){
+    public Flight(Plane plane, String flightNumber, String destination, String destinationAirport, String deptTime){
         this.plane = plane;
         this.flightNumber = flightNumber;
         this.destination = destination;
         this.destinationAirport = destinationAirport;
+        this.deptTime = deptTime;
     }
     public Plane getPlane(){
         return plane;
@@ -27,4 +29,9 @@ public class Flight {
     public String getDestinationAirport() {
         return destinationAirport;
     }
+
+    public String getDeptTime(){
+        return deptTime;
+    }
+
 }
