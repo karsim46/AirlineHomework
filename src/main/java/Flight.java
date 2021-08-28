@@ -1,6 +1,8 @@
-public class Flight {
+public class Flight extends Pilot{
 
     private Plane plane;
+    private Pilot pilot;
+
     private String flightNumber;
     private String destination;
     private String destinationAirport;
@@ -8,7 +10,9 @@ public class Flight {
 
 
 
-    public Flight(Plane plane, String flightNumber, String destination, String destinationAirport, String deptTime){
+    public Flight(Plane plane, String flightNumber, String destination, String destinationAirport, String deptTime, Pilot pilot){
+        super("Bruce Dickinson","Pilot","IRMA666");
+        this.pilot = pilot;
         this.plane = plane;
         this.flightNumber = flightNumber;
         this.destination = destination;
@@ -32,6 +36,10 @@ public class Flight {
 
     public String getDeptTime(){
         return deptTime;
+    }
+
+    public Pilot getPilot(){
+        return pilot;
     }
 
 }

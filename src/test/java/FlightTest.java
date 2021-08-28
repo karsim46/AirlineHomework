@@ -7,12 +7,15 @@ public class FlightTest {
 
     Plane plane;
     Flight flight;
+    Pilot pilot;
+
 
 
     @Before
     public void setUp(){
         plane = new Plane(PlaneType.BOEING747,524,10000.00);
-        flight = new Flight(plane,"FL666","Hell", "ABZ", "23.58");
+        pilot = new Pilot("Bruce Dickinson","Pilot","IRMA666");
+        flight = new Flight(plane,"FL666","Hell", "ABZ", "23.58",pilot);
     }
 
     @Test
@@ -38,6 +41,12 @@ public class FlightTest {
     public void hasDeptTime(){
         assertEquals("23.58",flight.getDeptTime());
     }
+
+    @Test
+    public void hasPilot(){
+       assertEquals(pilot, flight.getPilot());
+    }
+
 
 
 
