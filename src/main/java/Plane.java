@@ -1,13 +1,16 @@
 public class Plane {
+
+    private PlaneType type;
     private int capacity;
     private double weight;
-    private String model;
 
-    public Plane(int capacity, double weight, String model) {
-        this.capacity= capacity;
+    public Plane(PlaneType planeType, int capacity, double weight) {
         this.weight = weight;
-        this.model = model;
+        this.type = planeType;
+        this.capacity = capacity;
+
     }
+
 
 
     public int getCapacity() {
@@ -18,8 +21,8 @@ public class Plane {
         return weight;
     }
 
-    public String getModel() {
-        return model;
+    public PlaneType getType() {
+        return type;
     }
 
 

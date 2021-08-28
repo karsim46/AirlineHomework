@@ -1,27 +1,20 @@
-import java.util.ArrayList;
+public class Flight {
 
-public class Flight extends Pilot{
-
+    private Plane plane;
     private String flightNumber;
-    private String destination;
-    private String destinationAirport;
-    private String departureTime;
-    private ArrayList<String>passengers;
-    private ArrayList<Integer>cabinCrewMembers;
 
-
-
-    public Flight(String name, String rank, String pilotLicenseNumber, String flightNumber, String destination, String destinationAirport, String departureTime) {
-        super(name, rank, pilotLicenseNumber);
+    public Flight(Plane plane, String flightNumber){
+        this.plane = plane;
         this.flightNumber = flightNumber;
-        this.destination = destination;
-        this.destinationAirport = destinationAirport;
-        this.departureTime = departureTime;
-        this.passengers = new ArrayList<>();
-        this.cabinCrewMembers = new ArrayList<>(5);
-
-
     }
+    public Plane getPlane(){
+        return plane;
+    }
+    public String getFlightNumber(){
+        return flightNumber;
+    }
+
+
+
+
 }
-
-
