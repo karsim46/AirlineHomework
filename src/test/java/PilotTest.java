@@ -7,10 +7,12 @@ public class PilotTest {
 
     Pilot pilot;
 
+
     @Before
     public void setUp(){
         pilot = new Pilot("Bruce Dickinson", "Pilot", "IRMA666");
     }
+
 
     @Test
     public void hasName() {
@@ -24,5 +26,10 @@ public class PilotTest {
     public void hasPilotLicenseNumber(){
         assertEquals("IRMA666", pilot.getPilotLicenseNumber());
     }
+
+//    @Test
+//    public void flyPlane(){
+//        assertEquals("Lets go from ABZ to hell!", pilot.flyThePlane(flight));
+//    }flight
 
 }
