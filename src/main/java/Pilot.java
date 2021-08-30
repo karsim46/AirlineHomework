@@ -1,12 +1,13 @@
-import java.util.concurrent.atomic.AtomicReference;
 
-public class Pilot {
+public class Pilot extends Plane{
     private final String name;
     private final String rank;
     private final String pilotLicenseNumber;
 
 
+
     public Pilot(String name, String rank, String pilotLicenseNumber) {
+        super(PlaneType.BOEING747,524,10000.00);
         this.name = name;
         this.rank = rank;
         this.pilotLicenseNumber = pilotLicenseNumber;
@@ -24,10 +25,8 @@ public class Pilot {
         return pilotLicenseNumber;
     }
 
-//    public String pilotCanFlyPlane(Flight flight) {
-//        Plane plane = flight.getPlane();
-//        AtomicReference<String> output = new AtomicReference<>(String.format("Good morning everyone! Wishing you all a very pleasant flight from %s to %s today", flight.getDepartureAirport(), flight.getDestination()));
-//        return output.get();
-//
-//    }
+    public String flyThePlane(Flight flight){
+        Plane plane = flight.getPlane();
+        return String.format("Flying %s to %s leaving from %s", plane.getType(), flight.getDestination(), flight.getDestinationAirport());
+    }
 }

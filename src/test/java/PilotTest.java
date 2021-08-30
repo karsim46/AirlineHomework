@@ -6,6 +6,8 @@ import static org.junit.Assert.assertEquals;
 public class PilotTest {
 
     Pilot pilot;
+    Flight flight;
+    Plane plane;
 
 
     @Before
@@ -27,9 +29,9 @@ public class PilotTest {
         assertEquals("IRMA666", pilot.getPilotLicenseNumber());
     }
 
-//    @Test
-//    public void flyPlane(){
-//        assertEquals("Lets go from ABZ to hell!", pilot.flyThePlane(flight));
-//    }flight
+    @Test
+    public void flyPlane(){
+        assertEquals("Flying Boeing 747 to hell leaving from ABZ", pilot.flyThePlane(flight));
+    }
 
 }
